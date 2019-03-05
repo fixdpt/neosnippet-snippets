@@ -159,8 +159,8 @@ snippet j.m
     java.math.
 
 snippet main
-    class `expand('%:p:t:r')` {
-        public static void main(String args[]) {
+    final class `expand('%:p:t:r')` {
+        public static void main(final String args[]) {
             ${0:#:body}
         }
     }

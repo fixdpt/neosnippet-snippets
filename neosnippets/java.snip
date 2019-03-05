@@ -20,7 +20,10 @@ abbr enum {}
     }
 
 snippet var
-    ${1:#:type} ${2:#:var}${3};
+    final ${1:#:type} ${2:#:var}${3};
+
+snippet v
+    final var ${1:#:var}${2};
 
 snippet const
     static public final ${1:#:type} ${2:#:var} = ${3};${4}

@@ -3,6 +3,15 @@ snippet class
         ${0:TARGET}
     }
 
+snippet lo
+    List.of(${1});${0:TARGET}
+
+snippet so
+    Set.of(${1});${0:TARGET}
+
+snippet mo
+    Map.of(${1});${0:TARGET}
+
 snippet interface
     interface ${1} ${2:#:extends}{
         ${0:TARGET}

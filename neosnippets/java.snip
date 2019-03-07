@@ -103,14 +103,14 @@ snippet try
         ${3:e.printStackTrace();}
     }
 
-snippet try_resources
+snippet tr
     try (${1:#:Resources}) {
         ${0:TARGET}
     } catch (${2:Exception} ${3:e}) {
         ${4:e.printStackTrace();}
     }
 
-snippet try_finally
+snippet tf
     try {
         ${0:TARGET}
     } catch (${1:Exception} ${2:e}) {
@@ -119,12 +119,12 @@ snippet try_finally
         ${4}
     }
 
-snippet catch
+snippet cat
     catch (${1:Exception} ${2:e}) {
         ${0:e.printStackTrace();}
     }
 
-snippet finally
+snippet fin
     finally {
         ${0:TARGET}
     }
@@ -137,20 +137,7 @@ snippet sy
 options word
     synchronized
 
-snippet testclass
-alias   tc
-options head
-    public class ${1} extends ${2:TestCase} {
-        ${0:TARGET}
-    }
-
-snippet test
-options head
-    public void test${1:#:Name}() throws Exception {
-        ${0:TARGET}
-    }
-
-snippet import
+snippet im
 alias   imt
     import ${1};
     ${0}
@@ -178,83 +165,6 @@ snippet main
     }
 
 
-snippet println
+snippet pl
 options word
     System.out.println(${1});
-
-snippet print
-options word
-    System.out.print(${1});
-
-snippet format
-options word
-    System.out.format(${1});
-
-#javadoc
-snippet comment
-    /**
-     * ${0:TARGET}
-     */
-
-snippet author
-    @author ${0:$TM_FULLNAME}
-
-snippet {code
-    {@code ${0}
-
-snippet deprecated
-    @deprecated ${0:#:description}
-
-snippet {docRoot
-    {@docRoot
-
-snippet {inheritDoc
-    {@inheritDoc
-
-snippet {link
-    {@link ${1:#:target} ${0:#:label}
-
-snippet {linkplain
-    {@linkplain ${1:#:target} ${0:#:label}
-
-snippet {literal
-    {@literal ${0}
-
-snippet param
-    @param ${1:#:var} ${0:#:description}
-
-snippet return
-    @return ${0:#:description}
-
-snippet see
-    @see ${0:#:reference}
-
-snippet serial
-    @serial ${0:#:description}
-
-snippet sd
-    @serialField ${0:#:description}
-
-snippet sf
-    @serialField ${1:#:name} ${2:#:type} ${0:#:description}
-
-snippet since
-    @since ${0:#:version}
-
-snippet throws
-    @throws ${1:#:class} ${0:#:description}
-
-snippet {value
-    {@value ${0}
-
-snippet version
-alias ver
-    @version ${0:#:version}
-
-snippet     helloworld
-options     head
-  public class ${1:Hello} {
-    static public void main(String args[]) {
-      System.out.println("Hello, world!");
-    }
-  }
